@@ -13,7 +13,6 @@ function getRepositories() {
     req.send();
 }
 
-
 function displayRepositories() {
   const repos = JSON.parse(this.responseText);
   console.log(repos);
@@ -58,18 +57,29 @@ function getCommits(el){
   
   const req = new XMLHttpRequest();
   
-  req.addEventListener('load', displayCommits)
+  req.addEventListener('load', displayCommits);
   
-  req.open('GET', `https://api.github.com/repos/${username}/${repo}/commits`)
-  req.send()
+  req.open('GET', `https://api.github.com/repos/${username}/${repo}/commits`);
+  req.send();
 }
 
 function displayCommits(){
-  const commits = JSON.parse(this.responseText)
+  const commits = JSON.parse(this.responseText);
   
-  const commitsList = `<ul>${com
-  .map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`)
-  .join('')}</ul>`
+  const commitsList = 
+        `<ul>${
+            commits.map(
+                commit => 
+                '<li><h3>' +
+                commit.commit.author.name +
+                ' (' +
+                commit.author.login +
+                ')</h3>' +
+                commit.commit.message +
+                '</li>'
+            )
+            .join('')
+        }</ul>`;
   
   
   document.getElementById('details').innerHTML = commitsList
