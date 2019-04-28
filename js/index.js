@@ -85,4 +85,4 @@ function displayCommits(){
   document.getElementById('details').innerHTML = commitsList;
 }
 
-
+//BRANCHES
