@@ -28,8 +28,8 @@ function displayRepositories() {
                     <a href="#" ${dataRepoName} ${dataUsername} onclick="getBranches(this)">Get Branches</a>
                 </li>`;
         })
-            .join('') +
-        '</ul>';
+    .join('') +
+  '</ul>';
     
     document.getElementById('repositories').innerHTML = repoList;
 }
