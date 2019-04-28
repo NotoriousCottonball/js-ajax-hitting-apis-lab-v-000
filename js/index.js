@@ -82,16 +82,19 @@ function displayCommits(){
         '</ul>';
   
   
-  document.getElemefunction getBranches(el){
-  const username = el.dataset.username
-  const repo = el.dataset.repository
-  const req = new XMLHttpRequest()
-  req.addEventListener('load', displayBranches)
-  req.open('GET', `https://api.github.com/repos/${username}/${repo}/branches`)
-  req.send()
-}ntById('details').innerHTML = commitsList;
+  document.getElementById('details').innerHTML = commitsList;
 }
 
 //BRANCHES 
 
+function getBranches(el){
+  const username = el.dataset.username
+  const repo = el.dataset.repository
+  
+  const req = new XMLHttpRequest()
+  
+  req.addEventListener('load', displayBranches)
+  req.open('GET', `https://api.github.com/repos/${username}/${repo}/branches`)
+  req.send()
+}
 
