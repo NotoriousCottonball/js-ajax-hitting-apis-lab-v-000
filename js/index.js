@@ -24,7 +24,7 @@ function displayRepositories() {
             <li>
                 <h2>${r.name}</h2>
                 <a href="${r.html_url}" target="_blank">${r.html_url}</a><br>
-                <a href="#" ${dataRepoName} ${dataUsername}onclick="getCommits(this)">Get Commits</a><br>
+                <a href="#" ${dataRepository} ${dataUsername}onclick="getCommits(this)">Get Commits</a><br>
                 <a href="#" ${dataRepoName} ${dataUsername} onclick="getBranches(this)">Get Branches</a>
             </li>`;
     })
