@@ -1,3 +1,6 @@
+//<form onsubmit="getRepositories();return false;">
+
+
 function getRepositories() {
     const username = document.getElementById('username').value;
     const req = new XMLHttpRequest();
