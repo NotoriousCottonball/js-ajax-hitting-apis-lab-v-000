@@ -27,7 +27,7 @@ function displayRepositories() {
         
         return `
             <li>
-                <h2>${r.name}</h2>
+                <h3>${r.name}</h3>
                 <a href="${r.html_url}" target="_blank">
                   ${r.html_url}
                 </a><br>
