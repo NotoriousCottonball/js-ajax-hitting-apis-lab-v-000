@@ -71,11 +71,11 @@ function displayCommits(){
         '<ul>' +
         
         commits.map (c => `
-                <li><h3> 
-              c.commit.author.name 
-                 (' +
+                <li>
+                  <h3> 
+                    ${c.commit.author.name} 
                 commit.author.login 
-                )</h3> +
+                )</h3>
                 commit.commit.message 
                 </li>`
         ).join('') +
