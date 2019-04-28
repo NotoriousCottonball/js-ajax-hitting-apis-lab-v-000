@@ -70,5 +70,7 @@ function displayCommits(){
   const commitsList = `<ul>${com
   .map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`)
   .join('')}</ul>`
-  document.getElementById('details').innerHTML = commits
+  
+  
+  document.getElementById('details').innerHTML = commitsList
 }
