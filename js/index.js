@@ -30,7 +30,7 @@ function displayRepositories() {
                 <h3>${r.name}</h3>
                 <a href="${r.html_url}" target="_blank">
                   ${r.html_url}
-                </a><br>
+                </a><br><br>
                 <a href="#" ${dataRepository} ${dataUsername} onclick="getCommits(this)">
                   Get Commits
                 </a><br>
