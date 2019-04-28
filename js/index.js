@@ -75,7 +75,7 @@ function displayCommits(){
                   <h3> 
                     ${c.commit.author.name} (${c.author.login})
                   </h3>
-                commit.commit.message 
+                  ${c.commit.message} 
                 </li>`
         ).join('') +
         
