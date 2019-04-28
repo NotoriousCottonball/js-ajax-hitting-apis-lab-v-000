@@ -107,7 +107,7 @@ function displayBranches() {
       
       branches.map(b => `
         <li>
-          ${branch.name}
+          ${b.name}
         </li>`
       ).join('') +
         
