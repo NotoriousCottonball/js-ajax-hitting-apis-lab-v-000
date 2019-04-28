@@ -50,7 +50,7 @@ function displayRepositories() {
     document.getElementById('repositories').innerHTML = repoList;
 }
 
-
+//COMMITS
 
 function getCommits(el){
   const username = el.dataset.username;
