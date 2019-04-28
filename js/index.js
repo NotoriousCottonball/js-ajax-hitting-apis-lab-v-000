@@ -49,6 +49,7 @@ function displayRepositories() {
 }
 
 
+
 function getCommits(el){
   const username = el.dataset.username;
   const repo = el.dataset.repository;
